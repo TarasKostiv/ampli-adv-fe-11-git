@@ -1,1 +1,260 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap");
+.space-bt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.space-ard, .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.align-cnt, .header__header, .header__list, .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-cnt, .hero, .life__article-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fd-clm, .hero, .life__article-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.f-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: #1b1b2f;
+}
+
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "MuseoModerno", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a::after {
+  content: "";
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  border: 1px solid white;
+  display: block;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+}
+
+a:hover::after {
+  content: "";
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  background: #162447;
+  border-radius: 0px 0px 16px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+}
+
+.header__header {
+  width: 40%;
+  margin-left: 20px;
+  font-size: 1.6rem;
+}
+
+.header__list {
+  width: 60%;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.hero {
+  margin: 93px 10px 10px 10px;
+  height: calc(100vh - (83px + 20px));
+  border-radius: 16px;
+  background: #aa4b6b;
+  /* fallback for old browsers */
+  background: -webkit-gradient(linear, left top, right top, from(#aa4b6b), color-stop(#6b6b83), to(#3b8d99));
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+}
+
+.hero__header {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero__txt {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.hero__btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 7px 15px;
+  border-radius: 16px;
+  margin-top: 20px;
+  color: gray;
+  font-family: "MuseoModerno", cursive;
+}
+
+.hero__btn {
+  -webkit-transition: 0.2s color, 0.2s background-color, 0.2s -webkit-transform;
+  transition: 0.2s color, 0.2s background-color, 0.2s -webkit-transform;
+  transition: 0.2s color, 0.2s background-color, 0.2s transform;
+  transition: 0.2s color, 0.2s background-color, 0.2s transform, 0.2s -webkit-transform;
+}
+
+.hero__btn:hover {
+  color: black;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.hero__btn:active {
+  color: #363636;
+  background-color: #cfcfcf;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.life {
+  margin-top: 20px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.life__article {
+  border-radius: 16px;
+  margin: 10px;
+}
+
+.life__article-left {
+  background: #aa4b6b;
+  border-radius: 16px;
+  width: 45%;
+  padding: 25px;
+}
+
+.life__article-right {
+  width: 55%;
+}
+
+.article__header {
+  font-size: 2.4rem;
+  width: 100%;
+  margin-top: 0;
+}
+
+.article__list {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.article__list-header {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.article__list-txt {
+  font-size: 1.2rem;
+}
+
+.article-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(33.333% - 6.45px);
+  margin: 10px 0px 10px 0px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+
+.article-img:first-of-type {
+  margin: 0;
+}
+
+.article-img:last-of-type {
+  margin: 0px;
+}
