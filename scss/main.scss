@@ -1,0 +1,174 @@
+@import "tool";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: #1b1b2f;
+}
+
+button,
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "MuseoModerno", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  @include linkHover(white, 0.2s);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+
+  background: #162447;
+  border-radius: 0px 0px 16px 16px;
+
+  display: flex;
+  position: fixed;
+  top: 0;
+
+  &__header {
+    width: 40%;
+    margin-left: 20px;
+    font-size: 1.6rem;
+
+    @extend .align-cnt;
+  }
+
+  &__list {
+    width: 60%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-size: 1.2rem;
+
+    @extend .space-ard, .align-cnt;
+  }
+}
+
+.hero {
+  margin: 93px 10px 10px 10px;
+  height: calc(100vh - (83px + 20px));
+  border-radius: 16px;
+
+  background: #aa4b6b; /* fallback for old browsers */
+  background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+
+  @extend .align-cnt, .justify-cnt, .fd-clm;
+
+  &__header {
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  &__txt {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  &__btn {
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 7px 15px;
+    border-radius: 16px;
+    margin-top: 20px;
+    color: gray;
+    font-family: "MuseoModerno", cursive;
+
+    @include elemHoverAndClick(black, null, 1, 0.2s, rgb(54, 54, 54), rgb(207, 207, 207), 0.95);
+  }
+}
+
+.life {
+  margin-top: 20px;
+  height: 90vh;
+  display: flex;
+
+  &__article {
+    border-radius: 16px;
+    margin: 10px;
+  }
+
+  &__article-left {
+    background: #aa4b6b;
+    border-radius: 16px;
+    width: 45%;
+    padding: 25px;
+
+    @extend .justify-cnt, .fd-clm;
+  }
+
+  &__article-right {
+    width: 55%;
+  }
+}
+
+.article {
+  &__header {
+    font-size: 2.4rem;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 15px;
+
+    &-header {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    &-txt {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-img {
+    display: flex;
+    height: calc(33.333% - 6.45px);
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+
+    &:first-of-type {
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin: 0px;
+    }
+  }
+}
