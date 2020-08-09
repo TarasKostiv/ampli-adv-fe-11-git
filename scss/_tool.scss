@@ -18,6 +18,11 @@
   justify-content: center;
 }
 
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .fd-clm {
   display: flex;
   flex-direction: column;
@@ -26,6 +31,16 @@
 .f-wrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+.align-s-end {
+  display: flex;
+  align-self: flex-end;
+}
+
+.justify-s-end {
+  display: flex;
+  justify-self: flex-end;
 }
 
 @mixin linkHover($color, $transition-time) {

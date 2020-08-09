@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./scss/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -12,12 +16,22 @@
         <h2 class="header__header">About me...</h2>
 
         <ul class="header__list">
-          <li class="header__list-item"><a class="header__link" href="#life">My life</a></li>
           <li class="header__list-item">
-            <a class="header__link" href="#experience">My experience</a>
+            <a class="header__link" href="#life"><i class="fas fa-user-alt"></i> My life</a>
           </li>
-          <li class="header__list-item"><a class="header__link" href="#future">My future</a></li>
-          <li class="header__list-item"><a class="header__link" href="#contacts">Contacts</a></li>
+          <li class="header__list-item">
+            <a class="header__link" href="#experience"
+              ><i class="fas fa-battery-half"></i> My experience</a
+            >
+          </li>
+          <li class="header__list-item">
+            <a class="header__link" href="#future"><i class="fas fa-rocket"></i> My future</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__link" href="#contacts"
+              ><i class="fas fa-address-card"></i> Contacts</a
+            >
+          </li>
         </ul>
       </nav>
 
@@ -27,7 +41,7 @@
           Hi! My name is Taras and would like to present some information about myself. <br />
           So click on the button and get information!
         </p>
-        <button class="hero__btn">Get information</button>
+        <button href="#life" class="hero__btn">Get information</button>
       </section>
 
       <section class="life" id="life">
@@ -61,7 +75,7 @@
           </ul>
         </article>
 
-        <article class="life__article life__article-right">
+        <article class="life__article life__article-right" id="experience">
           <img
             src="https://goodchildhood.files.wordpress.com/2017/10/what-makes-a-good-childhood.jpg?w=1200"
             alt="childhood"
@@ -80,35 +94,86 @@
         </article>
       </section>
 
-      <section class="experience">
+      <section class="experience" id="experience">
         <h2 class="experience__header">About things which I now...</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates aspernatur
-          impedit saepe neque. Harum possimus aperiam assumenda, odit maiores earum similique illo
-          repudiandae eveniet, accusamus at sapiente, natus dolor?
-        </p>
+        <div class="card-wrapper">
+          <div class="card">
+            <!-- <h3 class="card__header">HTML</h3> -->
+            <img src="./img/HTML5_logo.png" alt="HTML" class="card__img" />
+            <div class="progress">
+              <div class="progress__bar progress__bar-html">
+                <span class="progress__indicator">95%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <!-- <h3 class="card__header">CSS</h3> -->
+            <img src="./img/css3_logo.svg" alt="CSS" class="card__img" />
+
+            <div class="progress">
+              <div class="progress__bar progress__bar-css">
+                <span class="progress__indicator">80%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <!-- <h3 class="card__header">SASS</h3> -->
+            <img src="./img/Sass_logo.png" alt="SASS" class="card__img" />
+            <div class="progress">
+              <div class="progress__bar progress__bar-sass">
+                <span class="progress__indicator">65%</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <!-- <h3 class="card__header">JS</h3> -->
+            <img src="./img/JavaScript_logo.png" alt="JS" class="card__img" />
+            <div class="progress">
+              <div class="progress__bar progress__bar-js">
+                <span class="progress__indicator">20%</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="future">
-        <h2 class="future__header">Future which I want</h2>
-      </section>
-
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <form action="" class="contacts__form">
-          <input type="email" name="email" id="email" class="contacts__email" required />
-          <input
-            type="tel"
-            name="phone-number"
-            id="phone-number"
-            class="contacts__phone"
-            required
-          />
-          <textarea name="text-message" id="text-message"></textarea>
+          <fieldset class="contacts__fieldset">
+            <legend class="contacts__legend">Contacts</legend>
+            <div class="contacts__inputs">
+              <label class="contacts__label" for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="contacts__input contacts__email"
+                required
+              />
+              <label class="contacts__label" for="phone-number">Telephone</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                class="contacts__input contacts__phone"
+                required
+              />
+            </div>
+
+            <label class="contacts__label contacts__label-message" for="text-message"
+              >Message</label
+            >
+            <textarea
+              name="text-message"
+              id="text-message"
+              class="contacts__text-message"
+            ></textarea>
+          </fieldset>
         </form>
       </section>
 
       <footer>
-        <h3>&#169;Copyright Taras Kostiv</h3>
+        <h3 class="footer__copyright">&#169;Copyright Taras Kostiv</h3>
       </footer>
     </div>
   </body>
