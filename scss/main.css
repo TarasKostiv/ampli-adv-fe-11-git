@@ -17,7 +17,7 @@
       justify-content: space-around;
 }
 
-.align-cnt, .header__header, .header__list, .hero {
+.align-cnt, .header__header, .header__list, .hero, .experience, .experience .card-wrapper, .experience .card, .contacts__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,7 +26,7 @@
           align-items: center;
 }
 
-.justify-cnt, .hero, .life__article-left {
+.justify-cnt, .hero, .life__article-left, .experience, .experience .card, .contacts__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,7 +35,16 @@
           justify-content: center;
 }
 
-.fd-clm, .hero, .life__article-left {
+.justify-end, .progress__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.fd-clm, .hero, .life__article-left, .experience, .experience .card, .contacts__form, .contacts__fieldset, .contacts__inputs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,6 +60,21 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.align-s-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.justify-s-end, .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
 }
 
 * {
@@ -82,7 +106,8 @@ textarea {
 
 h1,
 h2,
-h3 {
+h3,
+legend {
   font-family: "MuseoModerno", cursive;
 }
 
@@ -111,6 +136,12 @@ a:hover::after {
           transform-origin: 100%;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -119,7 +150,7 @@ a:hover::after {
 
 .header {
   width: 100%;
-  background: #162447;
+  background: #517d8f;
   border-radius: 0px 0px 16px 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,7 +228,7 @@ a:hover::after {
 
 .life {
   margin-top: 20px;
-  height: 90vh;
+  height: calc(100vh - (83px + 10px));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,4 +288,156 @@ a:hover::after {
 
 .article-img:last-of-type {
   margin: 0px;
+}
+
+.experience {
+  margin-top: 20px;
+  margin: 10px;
+  border-radius: 16px;
+  padding: 25px;
+  height: 650px;
+  background: #637086;
+}
+
+.experience__header {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.experience .card {
+  width: 25%;
+  height: 100%;
+}
+
+.experience .card__img {
+  width: 80%;
+  height: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.progress {
+  width: 80%;
+  height: 20px;
+  background: gray;
+  border-radius: 16px;
+  margin-top: 25px;
+}
+
+.progress__bar {
+  border-radius: 16px;
+  background: #d84b7a;
+}
+
+.progress__bar-html {
+  width: 95%;
+}
+
+.progress__bar-css {
+  width: 80%;
+}
+
+.progress__bar-sass {
+  width: 65%;
+}
+
+.progress__bar-js {
+  width: 20%;
+}
+
+.progress__indicator {
+  display: inline-block;
+  height: 20px;
+  margin-right: 7px;
+}
+
+.contacts {
+  height: 650px;
+  padding: 25px;
+  margin-top: 20px;
+  margin: 10px;
+  border-radius: 16px;
+  background: #7a637d;
+}
+
+.contacts__form {
+  width: 100%;
+  height: 100%;
+}
+
+.contacts__fieldset {
+  width: 400px;
+}
+
+.contacts__legend {
+  font-size: 2.4rem;
+  padding: 0;
+}
+
+.contacts__label {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+.contacts__label:first-of-type {
+  margin-top: 0;
+}
+
+.contacts__label-message {
+  margin-top: 15px !important;
+}
+
+.contacts__input, .contacts__text-message {
+  border-radius: 8px;
+  padding: 7px;
+  font-size: 1.2rem;
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.contacts__input:focus, .contacts__text-message:focus {
+  border: 2px solid goldenrod;
+}
+
+.contacts__text-message {
+  width: 100%;
+  height: 100px;
+  resize: none;
+}
+
+footer {
+  background: #292947;
+  height: 80px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .life__article {
+    border-radius: 16px;
+    margin: 5px;
+  }
+  .article__header {
+    font-size: 2rem;
+    width: 100%;
+    margin: 0;
+  }
+  .article__list {
+    list-style: none;
+    padding-left: 15px;
+  }
+  .article__list-header {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  .article__list-txt {
+    font-size: 1.2rem;
+  }
 }
