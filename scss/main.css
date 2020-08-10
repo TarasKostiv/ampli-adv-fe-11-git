@@ -408,6 +408,13 @@ fieldset {
   resize: none;
 }
 
+.contacts__submit {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  border-radius: 16px;
+  padding: 10px 16px 10px 16px;
+}
+
 footer {
   background: #292947;
   height: 80px;
